@@ -82,10 +82,4 @@ below version of PONK.run.update is replaceing the above version. The below
 version does nothing, which allows everything to load in its initial position.
 */
 
-PONK.run.update = function () {
-        if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.W)) {
-        PONK.paddles.leftPaddle.y -= PONK.config.PADDLE_SPEED;
-        }
-    };
-
 window.onload = PONK.run.start;
