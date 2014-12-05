@@ -29,11 +29,10 @@ PONK.run.create = function () {
     PONK.paddles.leftPaddle = PONK.run.game.add.sprite(PONK.config.LEFT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'leftPaddle');
     PONK.paddles.leftPaddle.body.collideWorldBounds = true;
     PONK.paddles.leftPaddle.inputEnabled = true;
-    PONK.paddles.leftPaddle
 
-    var rightPaddle = PONK.run.game.add.sprite(PONK.config.RIGHT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'rightPaddle');
-    rightPaddle.body.collideWorldBounds = true;
-    rightPaddle.inputEnabled = true;
+    PONK.paddles.rightPaddle = PONK.run.game.add.sprite(PONK.config.RIGHT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'rightPaddle');
+    PONK.paddles.rightPaddle.body.collideWorldBounds = true;
+    PONK.paddles.rightPaddle.inputEnabled = true;
 
     //PONK.run.game.rightPaddle
     
@@ -61,14 +60,13 @@ PONK.run.update = function () {
         PONK.paddles.leftPaddle.y += PONK.config.PADDLE_SPEED;
         }
     
-    if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.I)) {
-        rightPaddle.x -= PONK.config.PADDLE_SPEED;
+    if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
+        PONK.paddles.rightPaddle.y -= PONK.config.PADDLE_SPEED;
         }
 
-    else if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.K)) {
-        rightPaddle.x += PONK.config.PADDLE_SPEED;
+    else if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
+        PONK.paddles.rightPaddle.y += PONK.config.PADDLE_SPEED;
         }
-
 
     };
 
