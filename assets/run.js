@@ -15,9 +15,9 @@ PONK.run.preload = function () {
 PONK.run.create = function () {
     var background = PONK.run.game.add.sprite(PONK.run.game.world.centerX, PONK.run.game.world.centerY, 
             'background');
-    var leftPaddle = PONK.run.game.add.sprite(PONK.config.LEFT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'leftPaddle');
-    leftPaddle.body.collideWorldBounds = true;
-    leftPaddle.inputEnabled = true;
+    PONK.paddles.leftPaddle = PONK.run.game.add.sprite(PONK.config.LEFT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'leftPaddle');
+    PONK.paddles.leftPaddle.body.collideWorldBounds = true;
+    PONK.paddles.leftPaddle.inputEnabled = true;
 
     var rightPaddle = PONK.run.game.add.sprite(PONK.config.RIGHT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'rightPaddle');
     rightPaddle.body.collideWorldBounds = true;
@@ -28,6 +28,8 @@ PONK.run.create = function () {
     ball.body.bounce.x = 1;
     ball.body.collideWorldBounds = true;
 
+    ball.body.velocity.x=150;
+
     background.anchor.setTo(0.5, 0.5);
     };
         
@@ -35,11 +37,11 @@ PONK.run.create = function () {
 PONK.run.update = function () {
 
     if (game.input.keyboard.isDown(Phaser.Keyboard.W)) {
-        leftPaddle.y -= PONK.config.PADDLE_SPEED;
+        PONK.paddles.leftPaddle.y -= PONK.config.PADDLE_SPEED;
         }
 
     else if (game.input.keyboard.isDown(Phaser.Keyboard.S)) {
-        leftPaddle.y += PONK.config.PADDLE_SPEED;
+        POONK.paddles.leftPaddle.y += PONK.config.PADDLE_SPEED;
         }
     
     if (game.input.keyboard.isDown(Phaser.Keyboard.I)) {
@@ -49,6 +51,8 @@ PONK.run.update = function () {
     else if (game.input.keyboard.isDown(Phaser.Keyboard.K)) {
         rightPaddle.x += PONK.config.PADDLE_SPEED;
         }
+
+
     };
 
 /*
