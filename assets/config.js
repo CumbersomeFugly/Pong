@@ -20,6 +20,8 @@ PONK.config.RIGHT_PADDLE_X = (PONK.config.SCREEN_WIDTH -
 PONK.config.PADDLE_SPAWN_Y = (PONK.config.CENTER_Y - 
 	    Math.floor(PONK.config.PADDLE_HEIGHT / 2));
 
+PONK.config.PADDLE_SPEED = 5;
+
 PONK.config.BALL_DIAMETER = PONK.config.PADDLE_WIDTH;
 PONK.config.BALL_SPAWN_X = (PONK.config.CENTER_X - 
 	    Math.floor(PONK.config.BALL_DIAMETER / 2));
