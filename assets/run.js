@@ -14,7 +14,7 @@ PONK.run.preload = function () {
 
 PONK.run.create = function () {
     PONK.run.game.physics.startSystem(Phaser.Physics.P2JS);
-    PONK.run.game.physics.p2.restitution = 1;
+    PONK.run.game.physics.p2.restitution = .01;
     
     // Don't let any of the following keys affect anything outside of our game:
     PONK.run.game.input.keyboard.addKeyCapture([Phaser.Keyboard.SPACEBAR]);
