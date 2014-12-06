@@ -30,6 +30,10 @@ PONK.run.create = function () {
     PONK.run.game.physics.p2.enableBody(PONK.ball, true);
     PONK.run.game.physics.p2.enableBody(PONK.paddles.rightPaddle, true);
     PONK.run.game.physics.p2.enableBody(PONK.paddles.leftPaddle, true);
+    
+    PONK.ball.body.fixedRotation = true;
+    PONK.paddles.leftPaddle.body.fixedRotation = true;
+    PONK.paddles.rightPaddle.body.fixedRotation = true;
     };
         
 //Does this have to be PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.W) or something?
