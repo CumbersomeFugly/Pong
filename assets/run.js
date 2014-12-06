@@ -1,10 +1,10 @@
 PONK.run.start = function() {
     PONK.run.game = new Phaser.Game(PONK.config.SCREEN_WIDTH, PONK.config.SCREEN_HEIGHT, 
-            Phaser.AUTO, 'PONK!', {preload: PONK.config.preload, create: PONK.run.create, update: 
+            Phaser.AUTO, 'PONK!', {preload: PONK.run.preload, create: PONK.run.create, update: 
             PONK.run.update});
     };
 
-PONK.config.preload = function () {
+PONK.run.preload = function () {
     PONK.background.preload();
     PONK.paddles.preload();
     PONK.ball.preload();
