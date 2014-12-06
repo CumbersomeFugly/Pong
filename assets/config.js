@@ -19,18 +19,18 @@ PONK.config.LEFT_PADDLE_X = Math.floor(PONK.config.PADDLE_WIDTH / 2);
 PONK.config.RIGHT_PADDLE_X = (PONK.config.SCREEN_WIDTH - 
 	    Math.floor(PONK.config.PADDLE_WIDTH / 2));
 PONK.config.PADDLE_SPAWN_Y = (PONK.config.CENTER_Y);
-
-PONK.config.PADDLE_SPEED = 450;
+PONK.config.PADDLE_VELOCITY = 450;
 
 PONK.config.BALL_DIAMETER = PONK.config.PADDLE_WIDTH;
 PONK.config.BALL_SPAWN_X = (PONK.config.CENTER_X);
 PONK.config.BALL_SPAWN_Y = (PONK.config.CENTER_Y);
+PONK.config.BALL_SPAWN_SPEED = (Math.floor(Math.random() * 2) == 0) ? -150 : 150;
+// ^^^ The above line randomly determines which way the ball starts flying.
 
 PONK.config.BACKGROUND_IMG = 'assets/images/background.png';
 PONK.config.LEFT_PADDLE_IMG = 'assets/images/leftPaddle.png';
 PONK.config.RIGHT_PADDLE_IMG = 'assets/images/rightPaddle.png';
 PONK.config.BALL_IMG = 'assets/images/ball.png';
-
 
 // Check to see if we are living the future. If we are living in the future and
 // the E.C.M.A. has convinced modern browsers to have Object.create predefined,
