@@ -1,10 +1,10 @@
 // Ye olde code mappe:
 var PONK = {
-	config : {},
-	background : {},
-	paddles : {},
-	ball : {},
-	run : {} // Starts phaser and handles updating.
+    config : {},
+    background : {},
+    paddles : {},
+    ball : {},
+    run : {} // Starts phaser and handles updating.
     };
 
 PONK.config.SCREEN_WIDTH = 600;
@@ -17,11 +17,11 @@ PONK.config.PADDLE_HEIGHT = Math.floor(PONK.config.SCREEN_HEIGHT / 5);
 
 PONK.config.LEFT_PADDLE_X = Math.floor(PONK.config.PADDLE_WIDTH / 2);
 PONK.config.RIGHT_PADDLE_X = (PONK.config.SCREEN_WIDTH - 
-	    Math.floor(PONK.config.PADDLE_WIDTH / 2));
+        Math.floor(PONK.config.PADDLE_WIDTH / 2));
 PONK.config.PADDLE_SPAWN_Y = (PONK.config.CENTER_Y);
 PONK.config.PADDLE_VELOCITY = 450;
 
-PONK.config.BALL_DIAMETER = PONK.config.PADDLE_WIDTH;
+PONK.config.BALL_RADIUS = Math.floor(PONK.config.PADDLE_WIDTH / 2);
 PONK.config.BALL_SPAWN_X = (PONK.config.CENTER_X);
 PONK.config.BALL_SPAWN_Y = (PONK.config.CENTER_Y);
 PONK.config.BALL_SPAWN_SPEED = (Math.floor(Math.random() * 2) == 0) ? -150 : 150;

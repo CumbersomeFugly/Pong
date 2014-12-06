@@ -17,7 +17,7 @@ PONK.paddles.init = function () {
 
 PONK.paddles.handleKeys = function () {
 
-	if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.W)) {
+    if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.W)) {
         PONK.paddles.leftPaddle.body.moveUp(PONK.config.PADDLE_VELOCITY);
         }
 
@@ -32,4 +32,6 @@ PONK.paddles.handleKeys = function () {
     if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
         PONK.paddles.rightPaddle.body.moveDown(PONK.config.PADDLE_VELOCITY);
         }
+    PONK.paddles.leftPaddle.body.x = PONK.config.LEFT_PADDLE_X;
+    PONK.paddles.rightPaddle.body.x = PONK.config.RIGHT_PADDLE_X;
     };
