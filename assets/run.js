@@ -41,19 +41,19 @@ PONK.run.create = function () {
 PONK.run.update = function () {
 
     if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.W)) {
-        PONK.paddles.leftPaddle.y -= PONK.config.PADDLE_SPEED;
+        PONK.paddles.leftPaddle.body.moveUp(PONK.config.PADDLE_SPEED);
         }
 
     if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.S)) {
-        PONK.paddles.leftPaddle.y += PONK.config.PADDLE_SPEED;
+        PONK.paddles.leftPaddle.body.moveDown(PONK.config.PADDLE_SPEED);
         }
     
     if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.UP)) {
-        PONK.paddles.rightPaddle.y -= PONK.config.PADDLE_SPEED;
+        PONK.paddles.rightPaddle.body.moveUp(PONK.config.PADDLE_SPEED);
         }
 
     if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.DOWN)) {
-        PONK.paddles.rightPaddle.y += PONK.config.PADDLE_SPEED;
+        PONK.paddles.rightPaddle.body.moveDown(PONK.config.PADDLE_SPEED);
         }
     };
 
