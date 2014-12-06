@@ -17,16 +17,13 @@ PONK.config.PADDLE_HEIGHT = Math.floor(PONK.config.SCREEN_HEIGHT / 5);
 PONK.config.LEFT_PADDLE_X = Math.floor(PONK.config.PADDLE_WIDTH / 2);
 PONK.config.RIGHT_PADDLE_X = (PONK.config.SCREEN_WIDTH - 
 	    Math.floor(PONK.config.PADDLE_WIDTH / 2));
-PONK.config.PADDLE_SPAWN_Y = (PONK.config.CENTER_Y - 
-	    Math.floor(PONK.config.PADDLE_HEIGHT / 2));
+PONK.config.PADDLE_SPAWN_Y = (PONK.config.CENTER_Y);
 
 PONK.config.PADDLE_SPEED = 450;
 
 PONK.config.BALL_DIAMETER = PONK.config.PADDLE_WIDTH;
-PONK.config.BALL_SPAWN_X = (PONK.config.CENTER_X - 
-	    Math.floor(PONK.config.BALL_DIAMETER / 2));
-PONK.config.BALL_SPAWN_Y = (PONK.config.CENTER_Y - 
-	    Math.floor(PONK.config.BALL_DIAMETER / 2));
+PONK.config.BALL_SPAWN_X = (PONK.config.CENTER_X);
+PONK.config.BALL_SPAWN_Y = (PONK.config.CENTER_Y);
 
 PONK.config.LOADING_IMG = 'assets/images/loadingScreen.png';
 PONK.config.BACKGROUND_IMG = 'assets/images/background.png';
