@@ -16,7 +16,7 @@ PONK.config.PADDLE_HEIGHT = Math.floor(PONK.config.SCREEN_HEIGHT / 5);
 
 PONK.config.LEFT_PADDLE_X = 0;
 PONK.config.RIGHT_PADDLE_X = (PONK.config.SCREEN_WIDTH - 
-	    PONK.config.PADDLE_WIDTH);
+	    Math.floor(PONK.config.PADDLE_WIDTH / 2));
 PONK.config.PADDLE_SPAWN_Y = (PONK.config.CENTER_Y - 
 	    Math.floor(PONK.config.PADDLE_HEIGHT / 2));
 
