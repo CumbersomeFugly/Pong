@@ -1,6 +1,7 @@
 // Ye olde code mappe:
 var PONK = {
 	config : {},
+	background : {},
 	paddles : {},
 	ball : {},
 	run : {} // Starts phaser and handles updating.
@@ -25,11 +26,11 @@ PONK.config.BALL_DIAMETER = PONK.config.PADDLE_WIDTH;
 PONK.config.BALL_SPAWN_X = (PONK.config.CENTER_X);
 PONK.config.BALL_SPAWN_Y = (PONK.config.CENTER_Y);
 
-PONK.config.LOADING_IMG = 'assets/images/loadingScreen.png';
 PONK.config.BACKGROUND_IMG = 'assets/images/background.png';
 PONK.config.LEFT_PADDLE_IMG = 'assets/images/leftPaddle.png';
 PONK.config.RIGHT_PADDLE_IMG = 'assets/images/rightPaddle.png';
 PONK.config.BALL_IMG = 'assets/images/ball.png';
+
 
 // Check to see if we are living the future. If we are living in the future and
 // the E.C.M.A. has convinced modern browsers to have Object.create predefined,
