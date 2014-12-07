@@ -1,0 +1,22 @@
+	{ 
+		
+		"leftPaddle": [
+			
+				{
+					"density": 2, "friction": 0, "bounce": 0, 
+					"filter": { "categoryBits": 1, "maskBits": 65535 },
+					"shape": [   30, 96  ,  6, 120  ,  0, 120  ,  0, 0  ,  6, 0  ,  30, 24  ]
+				}  
+		]
+		
+		, 
+		"rightPaddle": [
+			
+				{
+					"density": 2, "friction": 0, "bounce": 0, 
+					"filter": { "categoryBits": 1, "maskBits": 65535 },
+					"shape": [   0, 24  ,  24, 0  ,  30, 0  ,  30, 120  ,  24, 120  ,  0, 96  ]
+				}  
+		]
+		
+	}
