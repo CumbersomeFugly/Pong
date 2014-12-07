@@ -8,6 +8,8 @@ PONK.ball.init = function () {
     PONK.ball.body.velocity.x = PONK.config.BALL_SPAWN_SPEED;
     PONK.ball.body.setCircle(PONK.config.BALL_RADIUS);
 
+
+// This is a kind of wierd way to do this, but PONK.ball.preload and PONK.ball.init 
     PONK.ball.update = function () {
         var angle, currVelocitySqr, xVelocity, yVelocity;
 
@@ -16,11 +18,11 @@ PONK.ball.init = function () {
   
         velocitySqr = xVelocity * xVelocity + yVelocity * yVelocity;
   
-        if (velocitySqr > PONK.config.MAX_BALL_SPEED * PONK.config.MAX_BALL_SPEED) {
+        if (velocitySqr > PONK.config.MAX_BALL_SPEED_Y * PONK.config.MAX_BALL_SPEED_X) {
             angle = Math.atan2(yVelocity, xVelocity);
     
-            xVelocity = Math.cos(angle) * PONK.config.MAX_BALL_SPEED;
-            yVelocity = Math.sin(angle) * PONK.config.MAX_BALL_SPEED;
+            xVelocity = Math.cos(angle) * PONK.config.MAX_BALL_SPEED_X;
+            yVelocity = Math.sin(angle) * PONK.config.MAX_BALL_SPEED_Y;
     
             PONK.ball.body.data.velocity[0] = xVelocity;
             PONK.ball.body.data.velocity[1] = yVelocity;

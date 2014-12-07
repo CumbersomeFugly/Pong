@@ -28,9 +28,11 @@ PONK.config.MIN_PADDLE_Y = PONK.config.SCREEN_HEIGHT - PONK.config.MAX_PADDLE_Y;
 PONK.config.BALL_RADIUS = Math.floor(PONK.config.PADDLE_WIDTH / 2);
 PONK.config.BALL_SPAWN_X = (PONK.config.CENTER_X);
 PONK.config.BALL_SPAWN_Y = (PONK.config.CENTER_Y);
-PONK.config.BALL_SPAWN_SPEED = (Math.floor(Math.random() * 2) == 0) ? -150 : 150;
+PONK.config.BALL_SPAWN_SPEED = (Math.floor(Math.random() * 2) == 0) ? -300 : 300;
 // ^^^ The above line randomly determines which way the ball starts flying.
-PONK.config.MAX_BALL_SPEED = 100;
+PONK.config.MAX_BALL_SPEED_X = 60;
+PONK.config.MAX_BALL_SPEED_Y = 35;
+
 
 PONK.config.BACKGROUND_IMG = 'assets/images/background.png';
 PONK.config.LEFT_PADDLE_IMG = 'assets/images/leftPaddle.png';
