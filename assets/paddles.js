@@ -9,14 +9,12 @@ PONK.paddles.init = function () {
     PONK.paddles.leftPaddle.body.damping = 0.9;
     PONK.paddles.leftPaddle.body.fixedRotation = true;
     PONK.paddles.leftPaddle.body.kinematic = true;
-    var leftPaddeCollisionGroup = PONK.run.game.physics.p2.createCollisionGroup();
 
     PONK.paddles.rightPaddle = PONK.run.game.add.sprite(PONK.config.RIGHT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'rightPaddle');
     PONK.run.game.physics.p2.enableBody(PONK.paddles.rightPaddle, true);
     PONK.paddles.rightPaddle.body.damping = 0.9;
     PONK.paddles.rightPaddle.body.fixedRotation = true;
     PONK.paddles.rightPaddle.body.kinematic = true;
-    var rightPaddleCollisionGroup = PONK.run.game.physics.p2.createCollisionGroup();
     };
 
 PONK.paddles.handleKeys = function () {
