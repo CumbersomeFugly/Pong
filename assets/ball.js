@@ -18,4 +18,23 @@ PONK.ball.init = function () {
     PONK.ball.body.damping = 0;
     PONK.ball.body.setCircle(PONK.config.BALL_RADIUS);
     var ballCollisionGroup = PONK.run.game.physics.p2.createCollisionGroup();
+
+    PONK.ball.update = function () {
+
+        if (PONK.ball.body.x > PONK.config.MAX_BALL_X) {
+            PONK.ball.body.x = PONK.config.BALL_SPAWN_X;
+            PONK.ball.body.y = PONK.config.BALL_SPAWN_Y;
+            PONK.ball.body.velocity.x = (-1 * Math.abs(PONK.config.BALL_SPAWN_SPEED));
+            PONK.ball.body.velocity.y = 0;
+            }
+            
+        else if (PONK.ball.body.x < PONK.config.MIN_BALL_X) {
+            PONK.ball.body.x = PONK.config.BALL_SPAWN_X;
+            PONK.ball.body.y = PONK.config.BALL_SPAWN_Y;
+            PONK.ball.body.velocity.x = Math.abs(PONK.config.BALL_SPAWN_SPEED);
+            PONK.ball.body.velocity.y = 0;
+            }
+
+        };
     };    
+

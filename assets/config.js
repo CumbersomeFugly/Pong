@@ -2,6 +2,7 @@
 var PONK = {
     config : {},
     background : {},
+    score : {},
     paddles : {},
     ball : {},
     run : {} // Starts phaser and handles updating.
@@ -28,10 +29,12 @@ PONK.config.MIN_PADDLE_Y = PONK.config.SCREEN_HEIGHT - PONK.config.MAX_PADDLE_Y;
 PONK.config.BALL_RADIUS = (PONK.config.PADDLE_WIDTH / 2);
 PONK.config.BALL_SPAWN_X = (PONK.config.CENTER_X);
 PONK.config.BALL_SPAWN_Y = (PONK.config.CENTER_Y);
-PONK.config.BALL_SPAWN_SPEED = ((Math.random() * 2) == 0) ? -300 : 300;
+PONK.config.BALL_SPAWN_SPEED = (Math.floor(Math.random() * 2) === 0) ? -300 : 300;
 // ^^^ The above line randomly determines which way the ball starts flying.
 PONK.config.MAX_BALL_SPEED_X = 60;
 PONK.config.MAX_BALL_SPEED_Y = 35;
+PONK.config.MIN_BALL_X = (-1 * PONK.config.BALL_RADIUS);
+PONK.config.MAX_BALL_X = (PONK.config.SCREEN_WIDTH + PONK.config.BALL_RADIUS);
 
 
 PONK.config.BACKGROUND_IMG = 'assets/images/background.png';
