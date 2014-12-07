@@ -8,7 +8,7 @@ PONK.paddles.init = function () {
     PONK.run.game.physics.p2.enableBody(PONK.paddles.leftPaddle, true);    
     PONK.paddles.leftPaddle.body.damping = 0.9;
     PONK.paddles.leftPaddle.body.fixedRotation = true;
-    
+
     PONK.paddles.rightPaddle = PONK.run.game.add.sprite(PONK.config.RIGHT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'rightPaddle');
     PONK.run.game.physics.p2.enableBody(PONK.paddles.rightPaddle, true);
     PONK.paddles.rightPaddle.body.damping = 0.9;
