@@ -7,9 +7,14 @@ PONK.ball.init = function () {
     PONK.run.game.physics.p2.enableBody(PONK.ball, true);
     PONK.ball.body.velocity.x = PONK.config.BALL_SPAWN_SPEED;
     PONK.ball.body.setCircle(PONK.config.BALL_RADIUS);
+    var ballCollisionGroup = PONK.run.game.physics.p2.createCollisionGroup();
+    
+//This is the code to switch gravity once you determine which paddle you hit. -> PONK.run.game.physics.p2.gravity.x = 100;
 
 
-// This is a kind of wierd way to do this, but PONK.ball.preload and PONK.ball.init 
+//This is a kind of weird way to do this, but PONK.ball.preload and PONK.ball.init 
+
+//Justin's stolen Internet algorithms for setting minimum and maximum speeds: 
     PONK.ball.update = function () {
         var angle, currVelocitySqr, xVelocity, yVelocity;
 
