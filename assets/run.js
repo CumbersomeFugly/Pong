@@ -12,7 +12,7 @@ PONK.run.preload = function () {
 
 PONK.run.create = function () {
     PONK.run.game.physics.startSystem(Phaser.Physics.P2JS);
-    PONK.run.game.physics.p2.restitution = 2;
+    PONK.run.game.physics.p2.restitution = 1;
   
     // Don't let any of the following keys affect anything outside of our game:
     PONK.run.game.input.keyboard.addKeyCapture([Phaser.Keyboard.DOWN]);
@@ -28,7 +28,6 @@ PONK.run.create = function () {
 // adding more to this loop.
 PONK.run.update = function () {
     PONK.paddles.handleKeys();
-    PONK.ball.update();
     };
 
 window.onload = PONK.run.start;
