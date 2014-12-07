@@ -17,4 +17,5 @@ PONK.ball.init = function () {
     PONK.ball.body.velocity.x = PONK.config.BALL_SPAWN_SPEED;
     PONK.ball.body.damping = 0;
     PONK.ball.body.setCircle(PONK.config.BALL_RADIUS);
-    };
+    var ballCollisionGroup = PONK.run.game.physics.p2.createCollisionGroup();
+    };    
