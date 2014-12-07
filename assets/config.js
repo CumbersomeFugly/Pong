@@ -7,7 +7,7 @@ var PONK = {
     run : {} // Starts phaser and handles updating.
     };
 
-PONK.config.SCREEN_WIDTH = 600;
+PONK.config.SCREEN_WIDTH = 1200;
 PONK.config.SCREEN_HEIGHT = 600;
 PONK.config.CENTER_X = Math.floor(PONK.config.SCREEN_WIDTH / 2);
 PONK.config.CENTER_Y = Math.floor(PONK.config.SCREEN_HEIGHT / 2);
