@@ -26,6 +26,7 @@ PONK.config.BALL_SPAWN_X = (PONK.config.CENTER_X);
 PONK.config.BALL_SPAWN_Y = (PONK.config.CENTER_Y);
 PONK.config.BALL_SPAWN_SPEED = (Math.floor(Math.random() * 2) == 0) ? -150 : 150;
 // ^^^ The above line randomly determines which way the ball starts flying.
+PONK.config.MAX_BALL_SPEED = 100;
 
 PONK.config.BACKGROUND_IMG = 'assets/images/background.png';
 PONK.config.LEFT_PADDLE_IMG = 'assets/images/leftPaddle.png';
