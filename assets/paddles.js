@@ -1,22 +1,36 @@
 PONK.paddles.preload = function () {
-    PONK.run.game.load.image('leftPaddle', PONK.config.LEFT_PADDLE_IMG);
-    PONK.run.game.load.image('rightPaddle', PONK.config.RIGHT_PADDLE_IMG);
+    PONK.run.game.load.image('leftPaddleImage', PONK.config.LEFT_PADDLE_IMG);
+    PONK.run.game.load.image('rightPaddleImage', PONK.config.RIGHT_PADDLE_IMG);
+
+    PONK.run.game.load.physics('leftPaddlePhysics', PONK.config.LEFT_PADDLE_PHYSICS);
+    PONK.run.game.load.physics('rightPaddlePhysics', PONK.config.RIGHT_PADDLE_PHYSICS);
     };
 
 PONK.paddles.init = function () {
-    PONK.paddles.leftPaddle = PONK.run.game.add.sprite(PONK.config.LEFT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'leftPaddle');
+    PONK.paddles.leftPaddle = PONK.run.game.add.sprite(PONK.config.LEFT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'leftPaddleImage');
     PONK.run.game.physics.p2.enableBody(PONK.paddles.leftPaddle, true);    
     PONK.paddles.leftPaddle.body.damping = 0.9;
     PONK.paddles.leftPaddle.body.fixedRotation = true;
     PONK.paddles.leftPaddle.body.kinematic = true;
+
+    PONK.paddles.leftPaddle.body.clearShapes();
+    PONK.paddles.leftPaddle.body.loadPolygon('leftPaddlePhysics', 'leftPaddle');
+
+// ^^^ This is my attempt at loading a hitmap to the left paddle. The shape 
+// ^^^ clearing works, but the new definition breaks it entirely. No clue why.
+
     var leftPaddeCollisionGroup = PONK.run.game.physics.p2.createCollisionGroup();
 
-    PONK.paddles.rightPaddle = PONK.run.game.add.sprite(PONK.config.RIGHT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'rightPaddle');
+    PONK.paddles.rightPaddle = PONK.run.game.add.sprite(PONK.config.RIGHT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'rightPaddleImage');
     PONK.run.game.physics.p2.enableBody(PONK.paddles.rightPaddle, true);
     PONK.paddles.rightPaddle.body.damping = 0.9;
     PONK.paddles.rightPaddle.body.fixedRotation = true;
     PONK.paddles.rightPaddle.body.kinematic = true;
     var rightPaddleCollisionGroup = PONK.run.game.physics.p2.createCollisionGroup();
+
+    PONK.paddles.rightPaddle.body.clearShapes();
+    PONK.paddles.rightPaddle.body.loadPolygon('rightPaddlePhysics', 'rightPaddle')
+
     };
 
 PONK.paddles.handleKeys = function () {

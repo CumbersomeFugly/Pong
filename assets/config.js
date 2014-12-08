@@ -42,6 +42,9 @@ PONK.config.LEFT_PADDLE_IMG = 'assets/images/leftPaddle.png';
 PONK.config.RIGHT_PADDLE_IMG = 'assets/images/rightPaddle.png';
 PONK.config.BALL_IMG = 'assets/images/ball.png';
 
+PONK.config.LEFT_PADDLE_PHYSICS = 'assets/physics/leftPaddle.json';
+PONK.config.RIGHT_PADDLE_PHYSICS = 'assets/physics/rightPaddle.json';
+
 // Check to see if we are living the future. If we are living in the future and
 // the E.C.M.A. has convinced modern browsers to have Object.create predefined,
 // go with that definition. Otherwise add it as a method of the global Object.
