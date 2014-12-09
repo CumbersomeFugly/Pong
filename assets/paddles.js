@@ -33,6 +33,18 @@ PONK.paddles.init = function () {
 
     };
 
+PONK.paddles.vanish = function () {
+    PONK.paddles.leftPaddle.exists = false;
+    PONK.paddles.rightPaddle.exists = false;
+    };
+
+PONK.paddles.reset = function () {
+    PONK.paddles.leftPaddle.exists = true;
+    PONK.paddles.leftPaddle.body.y = PONK.config.PADDLE_SPAWN_Y;
+    PONK.paddles.rightPaddle.exists = true;
+    PONK.paddles.rightPaddle.body.y = PONK.config.PADDLE_SPAWN_Y;
+    };
+
 PONK.paddles.handleKeys = function () {
 
     if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.W)) {

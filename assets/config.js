@@ -3,6 +3,7 @@ var PONK = {
     config : {},
     background : {},
     score : {},
+    win : {},
     paddles : {},
     ball : {},
     run : {} // Starts phaser and handles updating.

@@ -19,20 +19,20 @@ PONK.run.create = function () {
     // Don't let any of the following keys affect anything outside of our game:
     PONK.run.game.input.keyboard.addKeyCapture([Phaser.Keyboard.DOWN]);
     PONK.run.game.input.keyboard.addKeyCapture([Phaser.Keyboard.UP]);
+    PONK.run.game.input.keyboard.addKeyCapture([Phaser.Keyboard.SPACEBAR]);
     
     PONK.background.init();
     PONK.score.init();
+    PONK.win.init();
     PONK.ball.init();
     PONK.paddles.init();
     };
         
-// If we only end up having PONK.run.update call PONK.paddles.handleKeys then 
-// we could just define that as Phaser's update, but I suspect we'll end up 
-// adding more to this loop.
 PONK.run.update = function () {
     PONK.score.update();
     PONK.paddles.handleKeys();
     PONK.ball.update();
+    PONK.win.update();
     };
 
 window.onload = PONK.run.start;

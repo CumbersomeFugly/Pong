@@ -20,25 +20,31 @@ PONK.ball.init = function () {
     PONK.ball.body.setCircle(PONK.config.BALL_RADIUS);
     var ballCollisionGroup = PONK.run.game.physics.p2.createCollisionGroup();
 
+    PONK.ball.vanish = function () {
+        PONK.ball.exists = false;
+        };
+
+    PONK.ball.reset = function () {
+        PONK.ball.exists = true;
+        PONK.ball.body.x = PONK.config.BALL_SPAWN_X;
+        PONK.ball.body.y = PONK.config.BALL_SPAWN_Y;
+        PONK.ball.body.velocity.x = (Math.floor(Math.random() * 2) === 0) ? -300 : 300; 
+        PONK.ball.body.velocity.y = 0;
+        PONK.ball.body.angularVelocity = 0;
+        PONK.ball.body.rotation = 0;
+        };
+
     PONK.ball.update = function () {
 
         if (PONK.ball.body.x > PONK.config.MAX_BALL_X) {
-            PONK.ball.body.x = PONK.config.BALL_SPAWN_X;
-            PONK.ball.body.y = PONK.config.BALL_SPAWN_Y;
+            PONK.ball.reset();
             PONK.ball.body.velocity.x = (-1 * Math.abs(PONK.config.BALL_SPAWN_SPEED));
-            PONK.ball.body.velocity.y = 0;
-            PONK.ball.body.angularVelocity = 0;
-            PONK.ball.body.rotation = 0;
             PONK.score.left.addScore();
             }
             
         else if (PONK.ball.body.x < PONK.config.MIN_BALL_X) {
-            PONK.ball.body.x = PONK.config.BALL_SPAWN_X;
-            PONK.ball.body.y = PONK.config.BALL_SPAWN_Y;
+            PONK.ball.reset();
             PONK.ball.body.velocity.x = Math.abs(PONK.config.BALL_SPAWN_SPEED);
-            PONK.ball.body.velocity.y = 0;
-            PONK.ball.body.angularVelocity = 0;
-            PONK.ball.body.rotation = 0;
             PONK.score.right.addScore();
             }
         };
