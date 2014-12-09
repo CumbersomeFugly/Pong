@@ -11,8 +11,6 @@ var PONK = {
     run : {} // Starts phaser and handles updating.
     };
 
-var music;
-
 PONK.config.SCREEN_WIDTH = 1200;
 PONK.config.SCREEN_HEIGHT = 600;
 PONK.config.CENTER_X = (PONK.config.SCREEN_WIDTH / 2);
