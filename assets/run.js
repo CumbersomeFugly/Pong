@@ -23,6 +23,7 @@ PONK.run.create = function () {
     PONK.background.init();
     PONK.ball.init();
     PONK.paddles.init();
+    PONK.score.init();
     };
         
 // If we only end up having PONK.run.update call PONK.paddles.handleKeys then 

@@ -29,6 +29,7 @@ PONK.ball.init = function () {
             PONK.ball.body.velocity.y = 0;
             PONK.ball.body.angularVelocity = 0;
             PONK.ball.body.rotation = 0;
+            PONK.score.left.addScore();
             }
             
         else if (PONK.ball.body.x < PONK.config.MIN_BALL_X) {
@@ -38,6 +39,7 @@ PONK.ball.init = function () {
             PONK.ball.body.velocity.y = 0;
             PONK.ball.body.angularVelocity = 0;
             PONK.ball.body.rotation = 0;
+            PONK.score.right.addScore();
             }
         };
     };    
