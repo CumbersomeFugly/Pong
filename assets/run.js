@@ -24,8 +24,10 @@ PONK.run.create = function () {
     PONK.background.init();
     PONK.score.init();
     PONK.win.init();
+    PONK.pause.init();
     PONK.ball.init();
     PONK.paddles.init();
+//    PONK.intro.init();
     };
         
 PONK.run.update = function () {
@@ -33,6 +35,8 @@ PONK.run.update = function () {
     PONK.paddles.handleKeys();
     PONK.ball.update();
     PONK.win.update();
+    PONK.pause.update();
+//    PONK.intro.update();
     };
 
 window.onload = PONK.run.start;

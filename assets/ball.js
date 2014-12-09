@@ -34,6 +34,15 @@ PONK.ball.init = function () {
         PONK.ball.body.rotation = 0;
         };
 
+
+    PONK.ball.pause = function () {
+        PONK.ball.vanish();
+        };
+
+    PONK.ball.unpause = function () {
+        PONK.ball.exists = true;
+        };
+
     PONK.ball.update = function () {
 
         if (PONK.ball.body.x > PONK.config.MAX_BALL_X) {

@@ -1,9 +1,11 @@
 // Ye olde code mappe:
 var PONK = {
     config : {},
+    intro : {},
     background : {},
     score : {},
     win : {},
+    pause : {},
     paddles : {},
     ball : {},
     run : {} // Starts phaser and handles updating.
