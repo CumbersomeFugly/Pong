@@ -21,15 +21,16 @@ PONK.run.create = function () {
     PONK.run.game.input.keyboard.addKeyCapture([Phaser.Keyboard.UP]);
     
     PONK.background.init();
+    PONK.score.init();
     PONK.ball.init();
     PONK.paddles.init();
-    PONK.score.init();
     };
         
 // If we only end up having PONK.run.update call PONK.paddles.handleKeys then 
 // we could just define that as Phaser's update, but I suspect we'll end up 
 // adding more to this loop.
 PONK.run.update = function () {
+    PONK.score.update();
     PONK.paddles.handleKeys();
     PONK.ball.update();
     };
