@@ -13,7 +13,7 @@ PONK.ball.preload = function () {
 
 PONK.ball.init = function () {
     PONK.ball = PONK.run.game.add.sprite(PONK.config.BALL_SPAWN_X, PONK.config.BALL_SPAWN_Y, 'ball');
-    PONK.run.game.physics.p2.enableBody(PONK.ball, true);
+    PONK.run.game.physics.p2.enableBody(PONK.ball);
     PONK.ball.body.velocity.x = PONK.config.BALL_SPAWN_SPEED;
     PONK.ball.body.damping = 0;
     PONK.ball.body.angularDamping = 0;

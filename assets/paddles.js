@@ -8,7 +8,7 @@ PONK.paddles.preload = function () {
 
 PONK.paddles.init = function () {
     PONK.paddles.leftPaddle = PONK.run.game.add.sprite(PONK.config.LEFT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'leftPaddleImage');
-    PONK.run.game.physics.p2.enableBody(PONK.paddles.leftPaddle, true);    
+    PONK.run.game.physics.p2.enableBody(PONK.paddles.leftPaddle);    
     PONK.paddles.leftPaddle.body.damping = 0.9;
     PONK.paddles.leftPaddle.body.fixedRotation = true;
     PONK.paddles.leftPaddle.body.kinematic = true;
@@ -22,7 +22,7 @@ PONK.paddles.init = function () {
     var leftPaddeCollisionGroup = PONK.run.game.physics.p2.createCollisionGroup();
 
     PONK.paddles.rightPaddle = PONK.run.game.add.sprite(PONK.config.RIGHT_PADDLE_X, PONK.config.PADDLE_SPAWN_Y, 'rightPaddleImage');
-    PONK.run.game.physics.p2.enableBody(PONK.paddles.rightPaddle, true);
+    PONK.run.game.physics.p2.enableBody(PONK.paddles.rightPaddle);
     PONK.paddles.rightPaddle.body.damping = 0.9;
     PONK.paddles.rightPaddle.body.fixedRotation = true;
     PONK.paddles.rightPaddle.body.kinematic = true;
