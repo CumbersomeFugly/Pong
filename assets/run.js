@@ -27,6 +27,7 @@ PONK.run.create = function () {
     PONK.pause.init();
     PONK.ball.init();
     PONK.paddles.init();
+    PONK.run.game.debug.currentAlpha = 0;
 //    PONK.intro.init();
     };
         
@@ -36,6 +37,8 @@ PONK.run.update = function () {
     PONK.ball.update();
     PONK.win.update();
     PONK.pause.update();
+    PONK.config.music.loop = true;
+
 //    PONK.intro.update();
     };
 
