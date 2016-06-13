@@ -25,10 +25,10 @@ PONK.intro.init = function () {
 
 PONK.intro.update = function () {
 
-    if (PONK.intro.introd === true;) {
+    if (PONK.intro.introd === true) {
 
         if (PONK.run.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
-           	PONK.pause.unpause();
-      	    }
+            PONK.pause.unpause();
         }
-    };
+    }
+};
